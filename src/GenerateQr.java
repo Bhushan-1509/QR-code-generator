@@ -8,5 +8,6 @@ public class GenerateQr extends JFrame {
         setTitle("Generate QR");
         setLayout(new BorderLayout());
         setVisible(true);
+        setDefaultCloseOperation(3);
     }
 }

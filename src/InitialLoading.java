@@ -1,8 +1,9 @@
 import javax.swing.*;
 
+
 public class InitialLoading extends JFrame {
-    JProgressBar jb;
-    static JFrame load;
+    public JProgressBar jb;
+    public static JFrame load;
     public InitialLoading() throws InterruptedException {
 
         setSize(600,300);
@@ -33,11 +34,11 @@ public class InitialLoading extends JFrame {
 
     public static void main(String[] args) throws Exception {
 
-        load = new InitialLoading();
-        load.setVisible(true);
-//        new Main();
-        load.dispose();
-        load = new Main();
+        InitialLoading.load = new InitialLoading();
+        InitialLoading.load.setVisible(true);
+//        load.setDefaultCloseOperation(3);
+        InitialLoading.load.dispose();
+        InitialLoading.load = new Main();
         new PlayAudio();
 
     }

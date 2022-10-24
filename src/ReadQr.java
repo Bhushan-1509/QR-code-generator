@@ -8,5 +8,7 @@ public class ReadQr extends JFrame {
         setTitle("Read QR");
         setLayout(new BorderLayout());
         setVisible(true);
+        setDefaultCloseOperation(3);
+
     }
 }

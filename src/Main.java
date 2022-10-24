@@ -18,6 +18,7 @@ public class Main extends JFrame {
         generateQrCodeBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                InitialLoading.load.dispose();
                 try{
                     new PlayAudio();
                 } catch(LineUnavailableException ex) {
@@ -27,15 +28,15 @@ public class Main extends JFrame {
                 } catch(UnsupportedAudioFileException ex) {
                     ex.printStackTrace();
                 }
-                InitialLoading.load.dispose();
                 InitialLoading.load = new GenerateQr();
-                InitialLoading.load.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                InitialLoading.load.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
         });
         readQrCodeBtn.setBounds(50,200,230, 60);
         readQrCodeBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                InitialLoading.load.dispose();
                 try{
                     new PlayAudio();
                 } catch(LineUnavailableException ex) {
@@ -45,9 +46,8 @@ public class Main extends JFrame {
                 } catch(UnsupportedAudioFileException ex) {
                     ex.printStackTrace();
                 }
-                InitialLoading.load.dispose();
                 InitialLoading.load = new ReadQr();
-                InitialLoading.load.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                InitialLoading.load.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             }
         });
