@@ -21,6 +21,7 @@ public class Main extends JFrame {
                 InitialLoading.load.dispose();
                 try{
                     new PlayAudio();
+                    InitialLoading.load = new GenerateQr();
                 } catch(LineUnavailableException ex) {
                     ex.printStackTrace();
                 } catch(IOException ex) {
@@ -28,8 +29,6 @@ public class Main extends JFrame {
                 } catch(UnsupportedAudioFileException ex) {
                     ex.printStackTrace();
                 }
-                InitialLoading.load = new GenerateQr();
-//                InitialLoading.load.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
         });
         readQrCodeBtn.setBounds(50,200,230, 60);
